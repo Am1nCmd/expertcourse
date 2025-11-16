@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Expert Course Landing Page
 
-## Getting Started
+Platform bimbingan belajar online khusus mahasiswa - Landing Page
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: TailwindCSS 4.x
+- **UI Components**: HeroUI (NextUI successor)
+- **Icons**: Lucide React
+- **Language**: TypeScript
+- **Deployment**: Vercel
+
+## 📦 Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Server akan berjalan di [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+expert-course-landing/
+├── app/
+│   ├── layout.tsx          # Root layout dengan metadata SEO
+│   ├── page.tsx            # Main landing page
+│   └── globals.css         # Global styles & Tailwind
+├── components/
+│   ├── Hero.tsx            # Hero section
+│   ├── ValueProposition.tsx # Value highlights
+│   ├── Packages.tsx        # Paket belajar section
+│   ├── PackageCard.tsx     # Individual package card
+│   ├── Courses.tsx         # Mata kuliah section
+│   ├── CourseItem.tsx      # Individual course item
+│   ├── Testimonials.tsx    # Testimonial section
+│   ├── TestimonialCard.tsx # Individual testimonial
+│   ├── CTA.tsx             # Call-to-action section
+│   └── Footer.tsx          # Footer component
+├── lib/
+│   └── data.ts             # Static data
+├── types/
+│   └── index.ts            # TypeScript interfaces
+└── public/
+    ├── images/             # Images dan assets
+    └── icons/              # SVG icons
+```
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ SEO optimized dengan metadata lengkap
+- ✅ Performance optimized dengan Next.js Image
+- ✅ Structured data (JSON-LD)
+- ✅ Smooth scroll behavior
+- ✅ Modern UI dengan HeroUI components
+- ✅ TypeScript untuk type safety
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Sections
 
-## Deploy on Vercel
+1. **Hero Section** - Value proposition dan CTA utama
+2. **Value Proposition** - Keunggulan Expert Course
+3. **Packages** - Paket belajar dengan pricing
+4. **Courses** - Mata kuliah yang tersedia
+5. **Testimonials** - Review dari mahasiswa
+6. **CTA Section** - Final call-to-action
+7. **Footer** - Informasi kontak dan links
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Deploy ke Vercel
+
+1. Push code ke GitHub repository
+2. Import project di [Vercel](https://vercel.com)
+3. Vercel akan otomatis detect Next.js dan deploy
+
+Atau gunakan Vercel CLI:
+
+```bash
+npm install -g vercel
+vercel
+```
+
+## 📝 Customization
+
+### Update Content
+
+Edit file `lib/data.ts` untuk mengubah:
+- Hero text
+- Value propositions
+- Packages dan pricing
+- Courses list
+- Testimonials
+
+### Update Styling
+
+Edit `app/globals.css` untuk mengubah:
+- Color palette
+- Typography
+- Custom CSS variables
+
+## 📄 License
+
+© 2024 Expert Course. All rights reserved.
