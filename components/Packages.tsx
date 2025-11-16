@@ -40,7 +40,7 @@ const packageVariants: Variants = {
 
 export default function Packages({ packages }: PackagesProps) {
   return (
-    <section id="packages" className="section-padding-large bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="paket" className="section-padding-large bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(214,0,0,0.03),transparent_50%)]" />
       <div className="absolute top-20 right-10 w-32 h-32 bg-primary-100 rounded-full blur-3xl opacity-50" />

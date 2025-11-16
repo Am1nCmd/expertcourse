@@ -38,7 +38,7 @@ const testimonialVariants: Variants = {
 
 export default function Testimonials({ testimonials }: TestimonialsProps) {
   return (
-    <section className="section-padding bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section id="testimoni" className="section-padding bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(214,0,0,0.03),transparent_50%)]" />
       <div className="absolute top-20 left-10 w-32 h-32 bg-primary-100 rounded-full blur-3xl opacity-30" />

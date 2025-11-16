@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -11,21 +12,21 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Expert Course - Raih IPK 3.8+ dengan Bimbel Online Terpercaya",
+    default: "Expert Course - Bimbel TERBAIK Khusus Mahasiswa Telkom University",
     template: "%s | Expert Course"
   },
-  description: "🎓 Bimbel online khusus mahasiswa dengan tutor IPK 3.8+ dari UI, ITB, UGM. 1000+ mahasiswa terbukti naik IPK dalam 3 bulan. Gratis trial 7 hari! ⭐4.9/5",
+  description: "🎓 Bimbel terpercaya khusus mahasiswa Telkom University Bandung. Expert Squad dengan tutor berpengalaman. Video tutorial, latihan soal, dan konsultasi. Paket mulai 160K! ⭐4.9/5 #expertcourse #bimbelnyamahasiswa",
   keywords: [
-    "bimbel online mahasiswa",
-    "cara menaikkan IPK",
-    "tutor mahasiswa",
-    "les privat kuliah online",
-    "bimbingan belajar universitas",
-    "kalkulus online",
-    "statistika tutor",
-    "IPK 4.0 tips",
+    "bimbel telkom university",
+    "les privat telkom university",
     "expert course",
-    "mahasiswa sukses"
+    "bimbel mahasiswa tel-u",
+    "tutor telkom university",
+    "kalkulus telkom",
+    "algoritma pemrograman",
+    "rangkaian listrik",
+    "expert squad",
+    "bimbel bandung"
   ],
   authors: [{ name: "Expert Course Indonesia" }],
   creator: "Expert Course Indonesia",
@@ -45,12 +46,12 @@ export const metadata: Metadata = {
     canonical: "https://expertcourse.vercel.app",
   },
   openGraph: {
-    title: "Expert Course - Raih IPK 3.8+ dengan Bimbel Online Terpercaya",
-    description: "🎓 Bimbel online khusus mahasiswa dengan tutor IPK 3.8+ dari UI, ITB, UGM. 1000+ mahasiswa terbukti naik IPK dalam 3 bulan. Gratis trial 7 hari!",
+    title: "Expert Course - Bimbel TERBAIK Khusus Mahasiswa Telkom University",
+    description: "🎓 Bimbel terpercaya khusus mahasiswa Telkom University Bandung. Expert Squad dengan tutor berpengalaman. Paket mulai 160K! ⭐4.9/5",
     type: "website",
     locale: "id_ID",
     url: "https://expertcourse.vercel.app",
-    siteName: "Expert Course Indonesia",
+    siteName: "Expert Course - Telkom University",
     images: [
       {
         url: "https://expertcourse.vercel.app/images/og-image.png",
@@ -62,8 +63,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Expert Course - Raih IPK 3.8+ dengan Bimbel Online",
-    description: "🎓 1000+ mahasiswa terbukti naik IPK dalam 3 bulan. Gratis trial 7 hari! ⭐4.9/5",
+    title: "Expert Course - Bimbel TERBAIK Mahasiswa Telkom University",
+    description: "🎓 Expert Squad dengan tutor berpengalaman. Paket mulai 160K! ⭐4.9/5 #expertcourse #bimbelnyamahasiswa",
     images: ["https://expertcourse.vercel.app/images/og-image.png"],
     creator: "@expertcourse_id",
     site: "@expertcourse_id",
@@ -83,9 +84,9 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Expert Course Indonesia",
-    "alternateName": "Expert Course",
-    "description": "Platform bimbingan belajar online khusus mahasiswa Indonesia dengan tutor berpengalaman dari universitas terkemuka",
+    "name": "Expert Course",
+    "alternateName": "Expert Course Telkom University",
+    "description": "Bimbel TERBAIK khusus mahasiswa Telkom University Bandung. Expert Squad dengan tutor berpengalaman, video tutorial, dan latihan soal lengkap.",
     "url": "https://expertcourse.vercel.app",
     "logo": {
       "@type": "ImageObject",
@@ -98,20 +99,20 @@ export default function RootLayout({
     "email": "hello@expertcourse.id",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Gedung Cyber, Jl. Kuningan Raya No. 26",
-      "addressLocality": "Jakarta Selatan",
-      "addressRegion": "DKI Jakarta",
-      "postalCode": "12950",
+      "streetAddress": "Telkom University, Jl. Telekomunikasi No. 1",
+      "addressLocality": "Bandung",
+      "addressRegion": "Jawa Barat",
+      "postalCode": "40257",
       "addressCountry": "ID"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "-6.2298",
-      "longitude": "106.8253"
+      "latitude": "-6.9734",
+      "longitude": "107.6253"
     },
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "priceRange": "Rp 199.000 - Rp 549.000",
+    "foundingDate": "2018",
+    "numberOfEmployees": "10-50",
+    "priceRange": "Rp 160.000 - Rp 750.000",
     "paymentAccepted": "Transfer Bank, E-Wallet, Kartu Kredit",
     "currenciesAccepted": "IDR",
     "areaServed": "Indonesia",
@@ -125,30 +126,30 @@ export default function RootLayout({
           "@type": "Offer",
           "itemOffered": {
             "@type": "Course",
-            "name": "Paket Basic",
-            "description": "5 mata kuliah pilihan dengan video pembelajaran berkualitas tinggi"
+            "name": "Paket A (Bronze)",
+            "description": "3 minggu, 1 mata kuliah, 4 pertemuan"
           },
-          "price": "199000",
-          "priceCurrency": "IDR"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Course", 
-            "name": "Paket Premium",
-            "description": "Semua mata kuliah dengan konsultasi 1-on-1"
-          },
-          "price": "349000",
+          "price": "160000",
           "priceCurrency": "IDR"
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Course",
-            "name": "Paket Ultimate", 
-            "description": "Akses selamanya dengan career mentoring"
+            "name": "Paket B (Silver)",
+            "description": "7 minggu, semua mata kuliah, sertifikat kelulusan"
           },
-          "price": "549000",
+          "price": "750000",
+          "priceCurrency": "IDR"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Paket C (Gold)",
+            "description": "4 minggu, 1 mata kuliah, 7 pertemuan intensif"
+          },
+          "price": "500000",
           "priceCurrency": "IDR"
         }
       ]
@@ -170,16 +171,16 @@ export default function RootLayout({
         },
         "author": {
           "@type": "Person",
-          "name": "Sarah Putri Andalas"
+          "name": "Budi Santoso"
         },
-        "reviewBody": "IPK gue naik dari 2.9 jadi 3.6 dalam 2 semester! Materinya praktis dan tutor-tutornya sabar banget."
+        "reviewBody": "Alhamdulillah IPK naik dari 2.8 jadi 3.5 setelah ikut Expert Course! Tutor-tutornya paham banget sama kurikulum Tel-U."
       }
     ],
     "sameAs": [
       "https://www.facebook.com/expertcourse.id",
-      "https://www.instagram.com/expertcourse.id", 
-      "https://www.youtube.com/c/expertcourseid",
-      "https://www.linkedin.com/company/expertcourse"
+      "https://www.instagram.com/expertcourse.id",
+      "https://line.me/R/ti/p/@expertcourse",
+      "https://www.youtube.com/c/expertcourseid"
     ]
   };
 
@@ -213,6 +214,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         <Providers>
+          <Navbar />
           {children}
         </Providers>
       </body>

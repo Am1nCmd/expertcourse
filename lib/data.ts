@@ -2,16 +2,16 @@ import { HeroProps, ValueItem, Package, Course, Testimonial, CTASectionProps } f
 
 // Hero Section Data
 export const heroData: HeroProps = {
-  headline: "Raih IPK Impianmu dengan Bimbingan Belajar Online #1",
-  subheadline: "Tingkatkan prestasi akademikmu bersama tutor berpengalaman dari kampus terbaik. Metode pembelajaran terbukti efektif, materi lengkap, dan komunitas mahasiswa aktif. Saatnya wujudkan target IPK yang selama ini kamu impikan!",
+  headline: "Bimbel TERBAIK Khusus Mahasiswa Telkom University",
+  subheadline: "Tingkatkan prestasi akademikmu bersama Expert Course - bimbingan belajar terpercaya di Telkom University Bandung. Metode pembelajaran terbukti efektif dengan tutor berpengalaman. #expertcourse #bimbelnyamahasiswa",
   primaryCTA: {
     text: "Daftar Sekarang",
-    href: "#packages",
+    href: "#paket",
     variant: "primary"
   },
   secondaryCTA: {
     text: "Lihat Testimoni",
-    href: "#testimonials",
+    href: "#testimoni",
     variant: "secondary"
   },
   heroImage: "/images/hero-illustration.svg"
@@ -22,143 +22,150 @@ export const values: ValueItem[] = [
   {
     id: "1",
     icon: "GraduationCap",
-    title: "Tutor Berkualitas Tinggi",
-    description: "Semua tutor adalah mahasiswa dan alumni terbaik dengan IPK minimal 3.8 dari PTN terkemuka seperti UI, ITB, UGM, dan ITS"
+    title: "Tutor Berpengalaman",
+    description: "Expert Squad kami terdiri dari tutor-tutor terbaik yang memahami kurikulum Telkom University dan siap membantumu"
   },
   {
     id: "2",
-    icon: "Clock",
-    title: "Fleksibilitas Maksimal",
-    description: "Belajar kapan saja, di mana saja. Cocok untuk kamu yang kuliah sambil kerja, aktif organisasi, atau punya jadwal tidak menentu"
+    icon: "BookOpen",
+    title: "Video Pembelajaran Lengkap",
+    description: "Video tutorial berkualitas tinggi yang dapat ditonton dan diunduh kapan saja, dilengkapi dengan latihan soal dan pembahasan PDF"
   },
   {
     id: "3",
-    icon: "BookOpen",
-    title: "Materi Selalu Ter-update",
-    description: "Video HD, soal terbaru, dan pembahasan mendalam. Update sesuai kurikulum terbaru kampus seluruh Indonesia"
+    icon: "Users",
+    title: "Komunitas Expert Squad",
+    description: "Bergabung dengan komunitas Expert Squad - mahasiswa Telkom University yang saling support dan berbagi ilmu"
   },
   {
     id: "4",
-    icon: "Users",
-    title: "Komunitas Support 1000+",
-    description: "Gabung grup eksklusif dengan 1000+ mahasiswa aktif. Diskusi, sharing tips, dan saling support 24/7"
+    icon: "Clock",
+    title: "Paket Belajar Fleksibel",
+    description: "Pilih paket belajar sesuai kebutuhanmu - dari 1 mata kuliah hingga semua mata kuliah dengan durasi yang bervariasi"
   }
 ];
 
 // Packages Data
 export const packages: Package[] = [
   {
-    id: "basic",
-    name: "Basic",
-    price: 199000,
-    duration: "per bulan",
+    id: "paket-a",
+    name: "Paket A (Bronze)",
+    price: 160000,
+    duration: "per batch",
     features: [
-      "5 mata kuliah pilihan utama",
-      "Video pembelajaran berkualitas tinggi",
-      "Bank soal + pembahasan lengkap",
-      "Grup diskusi komunitas",
-      "Sertifikat digital resmi",
-      "Garansi 14 hari"
+      "Durasi 3 minggu",
+      "1 mata kuliah pilihan",
+      "4 kali pertemuan",
+      "Video tutorial yang dapat diunduh",
+      "Latihan soal + pembahasan PDF",
+      "Akses grup Expert Squad"
     ],
     isPopular: false,
-    ctaText: "Daftar Sekarang",
-    ctaLink: "/register?package=basic"
+    ctaText: "Daftar Paket A",
+    ctaLink: "/kontak?package=paket-a"
   },
   {
-    id: "premium",
-    name: "Premium",
-    price: 349000,
-    duration: "per bulan",
+    id: "paket-b",
+    name: "Paket B (Silver)",
+    price: 750000,
+    duration: "per batch",
     features: [
-      "SEMUA mata kuliah (50+ courses)",
-      "Video pembelajaran 4K quality",
-      "Unlimited akses bank soal",
-      "Konsultasi 1-on-1 dengan tutor (2x/minggu)",
-      "Priority support di grup VIP",
-      "Materi bisa di-download",
-      "Sertifikat premium + transcript",
-      "E-book 'Strategi IPK 4.0'",
-      "Template catatan kuliah premium"
+      "Durasi 7 minggu",
+      "SEMUA mata kuliah",
+      "Pertemuan reguler per minggu",
+      "Video tutorial lengkap (download)",
+      "Bank soal + pembahasan lengkap",
+      "Akses Expert Squad VIP",
+      "Sertifikat kelulusan",
+      "Konsultasi dengan Expert Team"
     ],
     isPopular: true,
-    ctaText: "Daftar Sekarang",
-    ctaLink: "/register?package=premium"
+    ctaText: "Daftar Paket B",
+    ctaLink: "/kontak?package=paket-b"
   },
   {
-    id: "ultimate",
-    name: "Ultimate",
-    price: 549000,
-    duration: "per bulan",
+    id: "paket-c",
+    name: "Paket C (Gold)",
+    price: 500000,
+    duration: "per batch",
     features: [
-      "Semua fitur Premium",
-      "Bimbingan intensif tugas & project",
-      "Unlimited konsultasi pribadi",
-      "Live class eksklusif (max 20 orang)",
-      "Akses selamanya (lifetime access)",
-      "Priority support 24/7 via WhatsApp",
-      "Career mentoring + CV review",
-      "Sertifikat premium + rekomendasi"
+      "Durasi 4 minggu",
+      "1 mata kuliah pilihan",
+      "7 kali pertemuan intensif",
+      "Video pembelajaran premium",
+      "Latihan soal advanced + pembahasan",
+      "Personal guidance",
+      "Akses Expert Squad Premium",
+      "Sertifikat kelulusan"
     ],
     isPopular: false,
-    ctaText: "Daftar Sekarang",
-    ctaLink: "/register?package=ultimate"
+    ctaText: "Daftar Paket C",
+    ctaLink: "/kontak?package=paket-c"
   }
 ];
 
-// Courses Data  
+// Courses Data - Sesuai Kurikulum Telkom University
 export const courses: Course[] = [
-  { id: "1", name: "Kalkulus I, II, III", icon: "Calculator", category: "Fakultas Teknik" },
-  { id: "2", name: "Aljabar Linear & Geometri", icon: "Grid3x3", category: "Fakultas Teknik" },
-  { id: "3", name: "Fisika Dasar I & II", icon: "Atom", category: "Fakultas Teknik" },
-  { id: "4", name: "Kimia Organik & Anorganik", icon: "FlaskConical", category: "Fakultas MIPA" },
-  { id: "5", name: "Statistika & Probabilitas", icon: "BarChart3", category: "Fakultas Ekonomi" },
-  { id: "6", name: "Pemrograman (Python, Java, C++)", icon: "Code", category: "Fakultas Teknik" },
-  { id: "7", name: "Struktur Data & Algoritma", icon: "Database", category: "Fakultas Teknik" },
-  { id: "8", name: "Mikroekonomi & Makroekonomi", icon: "TrendingUp", category: "Fakultas Ekonomi" },
-  { id: "9", name: "Akuntansi Dasar & Menengah", icon: "Calculator", category: "Fakultas Ekonomi" },
-  { id: "10", name: "Bahasa Inggris Academic", icon: "Languages", category: "Mata Kuliah Umum" },
-  { id: "11", name: "Mekanika Teknik", icon: "Cog", category: "Fakultas Teknik" },
-  { id: "12", name: "Termodinamika", icon: "Flame", category: "Fakultas Teknik" }
+  // Fakultas Teknik (15 mata kuliah)
+  { id: "1", name: "Kalkulus", icon: "Calculator", category: "Fakultas Teknik" },
+  { id: "2", name: "Fisika", icon: "Atom", category: "Fakultas Teknik" },
+  { id: "3", name: "Kimia", icon: "FlaskConical", category: "Fakultas Teknik" },
+  { id: "4", name: "Matriks & Ruang Vektor", icon: "Grid3x3", category: "Fakultas Teknik" },
+  { id: "5", name: "Matematika Diskrit", icon: "Binary", category: "Fakultas Teknik" },
+  { id: "6", name: "Algoritma & Pemrograman", icon: "Code", category: "Fakultas Teknik" },
+  { id: "7", name: "Probabilitas & Statistika", icon: "BarChart3", category: "Fakultas Teknik" },
+  { id: "8", name: "Rangkaian Listrik", icon: "Zap", category: "Fakultas Teknik" },
+  { id: "9", name: "Persamaan Diferensial & Aplikasi", icon: "Calculator", category: "Fakultas Teknik" },
+  { id: "10", name: "Struktur Data", icon: "Database", category: "Fakultas Teknik" },
+  { id: "11", name: "Basis Data", icon: "HardDrive", category: "Fakultas Teknik" },
+  { id: "12", name: "Jaringan Komputer", icon: "Network", category: "Fakultas Teknik" },
+  { id: "13", name: "Sistem Operasi", icon: "Monitor", category: "Fakultas Teknik" },
+  { id: "14", name: "Rekayasa Perangkat Lunak", icon: "Code", category: "Fakultas Teknik" },
+  { id: "15", name: "Arsitektur & Organisasi Komputer", icon: "Cpu", category: "Fakultas Teknik" },
+  // Fakultas Ekonomi & Bisnis (3 mata kuliah)
+  { id: "16", name: "Akuntansi Biaya", icon: "Calculator", category: "Fakultas Ekonomi & Bisnis" },
+  { id: "17", name: "Manajemen Keuangan", icon: "TrendingUp", category: "Fakultas Ekonomi & Bisnis" },
+  { id: "18", name: "Ekonomi Mikro & Makro", icon: "DollarSign", category: "Fakultas Ekonomi & Bisnis" }
 ];
 
 // Testimonials Data
 export const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Sarah Putri Andalas",
-    university: "Universitas Indonesia",
+    name: "Budi Santoso",
+    university: "Telkom University",
     major: "Teknik Informatika",
     avatar: "/images/avatars/avatar-1.jpg",
     rating: 5,
-    text: "IPK gue naik dari 2.9 jadi 3.6 dalam 2 semester! Yang paling gue suka itu tutor-tutornya sabar banget dan cara ngajarnya gak bikin ngantuk. Materinya juga praktis, langsung to the point. Recommended banget!"
+    text: "Alhamdulillah IPK naik dari 2.8 jadi 3.5 setelah ikut Expert Course! Tutor-tutornya paham banget sama kurikulum Tel-U. Materinya jelas dan mudah dipahami. Recommended untuk mahasiswa Tel-U!"
   },
   {
     id: "2",
-    name: "Ahmad Fauzan",
-    university: "Institut Teknologi Bandung",
-    major: "Manajemen",
+    name: "Siti Nurhaliza",
+    university: "Telkom University",
+    major: "Teknik Elektro",
     avatar: "/images/avatars/avatar-2.jpg",
     rating: 5,
-    text: "Expert Course beneran game changer! Dulu gue sempet mau DO karena IPK stuck di 2.3. Sekarang udah 3.4 dan dapet beasiswa prestasi dari kampus. Thanks Expert Course yang udah ngubah hidup gue!"
+    text: "Expert Course sangat membantu! Dulu sempat kesulitan di mata kuliah Rangkaian Listrik, sekarang sudah paham. Video tutorialnya bisa diunduh jadi bisa belajar offline. Expert Squad-nya juga supportive banget!"
   },
   {
     id: "3",
-    name: "Dinda Maharani",
-    university: "Universitas Gadjah Mada",
-    major: "Kimia",
+    name: "Rizky Pratama",
+    university: "Telkom University",
+    major: "Manajemen Bisnis Telekomunikasi & Informatika",
     avatar: "/images/avatars/avatar-3.jpg",
     rating: 5,
-    text: "Konsultasi 1-on-1 nya super helpful! Tutor ngebantu gue ngerjain thesis dan ngasih feedback yang constructive banget. Sekarang udah lulus cum laude dan keterima di S2 luar negeri. Worth every penny!"
+    text: "Worth it banget! Paket B-nya komplet, semua mata kuliah bisa dipelajari. Expert Team-nya profesional dan selalu siap membantu. Thanks Expert Course sudah membantu saya lulus dengan IPK yang memuaskan!"
   }
 ];
 
 // CTA Section Data
 export const ctaSectionData: CTASectionProps = {
-  headline: "Siap Menjadi Mahasiswa Berprestasi?",
-  description: "Bergabunglah dengan ribuan mahasiswa yang telah meningkatkan IPK mereka. Expert Course memberikan hasil nyata dengan metode pembelajaran yang terbukti efektif. Wujudkan target akademik Anda bersama kami!",
+  headline: "Siap Menjadi Bagian dari Expert Squad?",
+  description: "Bergabunglah dengan Expert Course - bimbel terpercaya untuk mahasiswa Telkom University. Raih IPK impianmu bersama Expert Team dan Expert Squad. Pilih paket yang sesuai kebutuhanmu dan mulai belajar sekarang!",
   ctaButton: {
-    text: "Daftar Sekarang",
-    href: "/register",
+    text: "Hubungi Kami",
+    href: "/kontak",
     variant: "primary"
   }
 };

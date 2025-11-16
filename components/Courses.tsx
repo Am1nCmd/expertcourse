@@ -37,7 +37,7 @@ const courseVariants: Variants = {
 
 export default function Courses({ courses }: CoursesProps) {
   return (
-    <section className="section-padding-large bg-white">
+    <section id="mata-kuliah" className="section-padding-large bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <motion.div
           className="text-center mb-12"

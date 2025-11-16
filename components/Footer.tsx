@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Youtube, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Youtube, Linkedin, MessageSquare } from 'lucide-react';
+import { SiLine } from 'react-icons/si';
 import Image from 'next/image';
 import ExoTeamLogo from './brand/ExoTeamLogo';
 import { ScatteredHexagons } from './brand/HexagonPattern';
@@ -26,13 +27,13 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Platform bimbingan belajar online yang dirancang khusus untuk mahasiswa Indonesia. 
-              Sejak 2020, lebih dari 1000+ mahasiswa telah mempercayai kami sebagai partner belajar mereka.
+              Bimbel TERBAIK khusus mahasiswa yang berlokasi utama di Telkom University Bandung.
+              Bergabunglah dengan Expert Squad dan raih IPK impianmu! #expertcourse #bimbelnyamahasiswa
             </p>
             <div className="space-y-2">
-              <div className="text-green-400 text-sm font-semibold">✅ Terdaftar di Kemendikbud</div>
-              <div className="text-blue-400 text-sm font-semibold">🏆 ISO 9001:2015 Certified</div>
-              <div className="text-yellow-400 text-sm font-semibold">🤝 Partner 15+ Universitas</div>
+              <div className="text-green-400 text-sm font-semibold">🎓 Khusus Mahasiswa Tel-U</div>
+              <div className="text-blue-400 text-sm font-semibold">👥 500+ Expert Squad</div>
+              <div className="text-yellow-400 text-sm font-semibold">⭐ Rating 4.9/5</div>
             </div>
           </div>
 
@@ -41,28 +42,28 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white">Layanan</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#packages" className="text-gray-400 hover:text-primary-400 transition-colors">
+                <a href="/#paket" className="text-gray-400 hover:text-primary-400 transition-colors">
                   📚 Paket Belajar
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-400 hover:text-primary-400 transition-colors">
-                  💬 Testimoni Alumni
+                <a href="/#mata-kuliah" className="text-gray-400 hover:text-primary-400 transition-colors">
+                  📖 Mata Kuliah
+                </a>
+              </li>
+              <li>
+                <a href="/#testimoni" className="text-gray-400 hover:text-primary-400 transition-colors">
+                  💬 Testimoni Expert Squad
                 </a>
               </li>
               <li>
                 <a href="/blog" className="text-gray-400 hover:text-primary-400 transition-colors">
-                  📊 Blog & Tips Belajar
+                  📰 Expert News & Blog
                 </a>
               </li>
               <li>
-                <a href="/faq" className="text-gray-400 hover:text-primary-400 transition-colors">
-                  ❓ FAQ
-                </a>
-              </li>
-              <li>
-                <a href="/karir" className="text-gray-400 hover:text-primary-400 transition-colors">
-                  💼 Karir & Partnership
+                <a href="/kontak" className="text-gray-400 hover:text-primary-400 transition-colors">
+                  📞 Hubungi Kami
                 </a>
               </li>
             </ul>
@@ -89,8 +90,15 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5 text-red-400" />
                 <div>
-                  <div className="font-medium">Gedung Cyber, Kuningan</div>
-                  <div className="text-xs text-gray-500">Jakarta Selatan 12950</div>
+                  <div className="font-medium">Telkom University</div>
+                  <div className="text-xs text-gray-500">Bandung, Jawa Barat</div>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 text-gray-400">
+                <MessageSquare className="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" />
+                <div>
+                  <div className="font-medium">@expertcourse</div>
+                  <div className="text-xs text-gray-500">Line Official Account</div>
                 </div>
               </li>
             </ul>
@@ -122,18 +130,18 @@ export default function Footer() {
                 <Instagram className="w-5 h-5 group-hover:text-white" />
               </a>
               <a
+                href="https://line.me/R/ti/p/@expertcourse"
+                className="p-3 bg-gray-800 hover:bg-green-500 rounded-lg transition-colors group"
+                aria-label="Line"
+              >
+                <SiLine className="w-5 h-5 group-hover:text-white" />
+              </a>
+              <a
                 href="https://youtube.com/c/expertcourseid"
                 className="p-3 bg-gray-800 hover:bg-red-600 rounded-lg transition-colors group"
                 aria-label="YouTube"
               >
                 <Youtube className="w-5 h-5 group-hover:text-white" />
-              </a>
-              <a
-                href="https://linkedin.com/company/expertcourse"
-                className="p-3 bg-gray-800 hover:bg-blue-700 rounded-lg transition-colors group"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5 group-hover:text-white" />
               </a>
             </div>
             
@@ -187,21 +195,20 @@ export default function Footer() {
             </div>
 
             <div className="text-gray-400 text-sm">
-              <span className="font-semibold">PT. Expert Course Indonesia</span> |
-              <span> NPWP: 12.345.678.9-012.000</span>
+              <span className="font-semibold">Expert Course</span> - Bimbel TERBAIK Mahasiswa Telkom University
             </div>
             <p className="text-gray-400 text-sm">
-              &copy; {currentYear} Expert Course Indonesia. All Rights Reserved.
+              &copy; {currentYear} Expert Course. All Rights Reserved.
             </p>
             <p className="text-gray-500 text-xs italic">
-              "Wujudkan IPK Impianmu Bersama Expert Course" ❤️
+              "Raih IPK Impianmu Bersama Expert Squad" ❤️
             </p>
             <div className="text-xs text-gray-600 mt-2">
-              Expert Course adalah platform bimbingan belajar online yang membantu mahasiswa
+              Expert Course adalah bimbingan belajar khusus mahasiswa Telkom University yang membantu
               meningkatkan prestasi akademik. Hasil dapat bervariasi tergantung komitmen belajar masing-masing.
             </div>
             <div className="text-xs text-gray-500 mt-3">
-              Made with passion by EXO Team
+              Made with passion by EXO Team | #expertcourse #bimbelnyamahasiswa
             </div>
           </div>
         </div>
