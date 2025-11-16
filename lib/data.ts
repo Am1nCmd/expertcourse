@@ -85,7 +85,7 @@ export const packages: Package[] = [
   },
   {
     id: "paket-c",
-    name: "Paket C (Gold)",
+    name: "Paket C (Intensif)",
     price: 500000,
     duration: "per batch",
     features: [
@@ -94,7 +94,7 @@ export const packages: Package[] = [
       "7 kali pertemuan intensif",
       "Video pembelajaran premium",
       "Latihan soal advanced + pembahasan",
-      "Personal guidance",
+      "Personal guidance dari Expert Team",
       "Akses Expert Squad Premium",
       "Sertifikat kelulusan"
     ],
