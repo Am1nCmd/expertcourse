@@ -43,7 +43,7 @@ export default function HowToRegister() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
             Cara Pendaftaran
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -64,18 +64,18 @@ export default function HowToRegister() {
             >
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-blue-300 to-purple-300 -z-10" />
+                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-primary-300 to-primary-400 -z-10" />
               )}
 
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl hover:shadow-xl transition-shadow h-full">
+              <div className="bg-gradient-to-br from-red-50 to-primary-50 p-6 rounded-2xl hover:shadow-xl transition-shadow h-full">
                 {/* Step Number */}
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-bold text-xl mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-full font-bold text-xl mb-4">
                   {step.number}
                 </div>
 
                 {/* Icon */}
                 <div className="bg-white w-16 h-16 rounded-xl flex items-center justify-center mb-4 shadow-md">
-                  <step.icon size={32} className="text-blue-600" />
+                  <step.icon size={32} className="text-primary-600" />
                 </div>
 
                 {/* Content */}
@@ -96,7 +96,7 @@ export default function HowToRegister() {
         >
           <Link
             href="/kontak"
-            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all hover:scale-105"
+            className="inline-block bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all hover:scale-105"
           >
             Daftar Sekarang
           </Link>

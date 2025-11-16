@@ -9,10 +9,10 @@ export default function Hero({ headline, subheadline, primaryCTA, secondaryCTA, 
 
   return (
     <section className="relative min-h-[85vh] flex items-center section-padding overflow-hidden">
-      {/* Premium dark gradient background for excellent contrast */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900 -z-10" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(214,0,0,0.15),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(79,70,229,0.1),transparent_50%)]" />
+      {/* Premium dark red/maroon gradient background for excellent contrast */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-gray-900 to-primary-800 -z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(214,0,0,0.2),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,21,56,0.15),transparent_50%)]" />
 
       {/* Hexagon Pattern Background - Subtle pattern */}
       <ScatteredHexagons className="-z-10" color="rgba(255,255,255,0.05)" />
@@ -53,11 +53,11 @@ export default function Hero({ headline, subheadline, primaryCTA, secondaryCTA, 
             {/* Statistics */}
             <div className="flex flex-wrap gap-4 md:gap-6 justify-center lg:justify-start">
               <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-blue-300" />
+                <Users className="w-5 h-5 text-red-300" />
                 <span className="font-bold text-white drop-shadow-lg">1000+ Mahasiswa</span>
               </div>
               <div className="flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-green-300" />
+                <BookOpen className="w-5 h-5 text-red-300" />
                 <span className="font-bold text-white drop-shadow-lg">50+ Mata Kuliah</span>
               </div>
               <div className="flex items-center gap-2">
@@ -89,9 +89,9 @@ export default function Hero({ headline, subheadline, primaryCTA, secondaryCTA, 
           {/* Enhanced Hero Visual */}
           <div className="relative w-full h-[500px] md:h-[600px] lg:h-[650px] order-1 lg:order-2">
             {/* Elegant background effects */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-800/30 via-primary-800/20 to-gray-900/30 rounded-3xl blur-3xl" />
-            <div className="absolute top-10 right-10 w-40 h-40 bg-blue-500/15 rounded-full blur-3xl" />
-            <div className="absolute bottom-10 left-10 w-32 h-32 bg-red-500/15 rounded-full blur-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-800/30 via-primary-700/20 to-gray-900/30 rounded-3xl blur-3xl" />
+            <div className="absolute top-10 right-10 w-40 h-40 bg-primary-500/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-10 left-10 w-32 h-32 bg-red-500/20 rounded-full blur-2xl" />
             
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="w-full h-full max-w-2xl relative">
@@ -140,7 +140,7 @@ export default function Hero({ headline, subheadline, primaryCTA, secondaryCTA, 
 
                 <div className="absolute -bottom-4 -right-4 bg-white/20 backdrop-blur-md rounded-xl shadow-xl p-4 hover-lift border border-white/40">
                   <div className="flex items-center gap-2">
-                    <BookOpen className="w-6 h-6 text-blue-300" />
+                    <BookOpen className="w-6 h-6 text-red-300" />
                     <span className="text-sm font-bold text-white drop-shadow-md">50+ Courses</span>
                   </div>
                 </div>

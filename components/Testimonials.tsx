@@ -80,8 +80,8 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
             </div>
             
             <div className="flex items-center gap-3 bg-white rounded-lg px-4 py-3 shadow-sm">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <Users className="w-5 h-5 text-blue-600" />
+              <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                <Users className="w-5 h-5 text-primary-600" />
               </div>
               <div className="text-left">
                 <div className="text-lg font-bold text-gray-900">1000+</div>

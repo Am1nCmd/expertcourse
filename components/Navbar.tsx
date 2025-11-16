@@ -46,7 +46,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-2xl px-4 py-2 rounded-lg">
+            <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold text-2xl px-4 py-2 rounded-lg">
               EXO
             </div>
             <span className={`font-bold text-lg hidden sm:block ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
@@ -61,7 +61,7 @@ export default function Navbar() {
                 <button
                   key={item.label}
                   onClick={() => handleNavClick(item.href)}
-                  className={`font-medium transition-colors hover:text-blue-600 ${
+                  className={`font-medium transition-colors hover:text-primary-600 ${
                     isScrolled ? 'text-gray-700' : 'text-white'
                   }`}
                 >
@@ -71,7 +71,7 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`font-medium transition-colors hover:text-blue-600 ${
+                  className={`font-medium transition-colors hover:text-primary-600 ${
                     isScrolled ? 'text-gray-700' : 'text-white'
                   }`}
                 >
@@ -102,7 +102,7 @@ export default function Navbar() {
                   <button
                     key={item.label}
                     onClick={() => handleNavClick(item.href)}
-                    className="text-left py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                    className="text-left py-3 px-4 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors font-medium"
                   >
                     {item.label}
                   </button>
@@ -111,7 +111,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                    className="py-3 px-4 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors font-medium"
                   >
                     {item.label}
                   </Link>

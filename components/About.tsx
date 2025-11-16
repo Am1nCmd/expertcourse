@@ -39,7 +39,7 @@ export default function About() {
   ]
 
   return (
-    <section id="tentang" className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section id="tentang" className="py-20 bg-gradient-to-br from-red-50 via-white to-primary-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -49,7 +49,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
             Tentang Expert Course
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ export default function About() {
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-xl text-white flex-shrink-0">
+                <div className="bg-gradient-to-br from-primary-500 to-primary-700 p-3 rounded-xl text-white flex-shrink-0">
                   <item.icon size={28} />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="bg-white p-8 md:p-12 rounded-2xl shadow-lg"
         >
-          <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
             Mengapa Memilih Expert Course?
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
@@ -102,7 +102,7 @@ export default function About() {
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 className="flex items-start space-x-3"
               >
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="bg-gradient-to-br from-primary-500 to-primary-700 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-sm font-bold">✓</span>
                 </div>
                 <p className="text-gray-700">{reason}</p>
@@ -126,7 +126,7 @@ export default function About() {
             { number: "4.9/5", label: "Rating" }
           ].map((stat, index) => (
             <div key={index} className="text-center bg-white p-6 rounded-xl shadow-md">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
               <div className="text-gray-600 font-medium">{stat.label}</div>

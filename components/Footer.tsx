@@ -76,22 +76,22 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-gray-400">
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5 text-primary-400" />
                 <div>
-                  <div className="font-medium">hello@expertcourse.id</div>
+                  <div className="font-medium">team@expertcourse.net</div>
                   <div className="text-xs text-gray-500">Email resmi</div>
                 </div>
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 text-green-400" />
                 <div>
-                  <div className="font-medium">+62 812-3456-7890</div>
+                  <div className="font-medium">+6283236118636</div>
                   <div className="text-xs text-gray-500">WhatsApp (Fast Response)</div>
                 </div>
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5 text-red-400" />
                 <div>
-                  <div className="font-medium">Telkom University</div>
-                  <div className="text-xs text-gray-500">Bandung, Jawa Barat</div>
+                  <div className="font-medium">Jl. Ganesha, Permata Buah Batu Blok D No.82</div>
+                  <div className="text-xs text-gray-500">Lengkong, Bojongsoang, Bandung 40287</div>
                 </div>
               </li>
               <li className="flex items-start gap-3 text-gray-400">
