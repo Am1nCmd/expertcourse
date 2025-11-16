@@ -5,8 +5,17 @@ import { Button } from '@heroui/react';
 import { ArrowRight, Star, Users, BookOpen } from 'lucide-react';
 import ExpertCourseLogo from './brand/ExpertCourseLogo';
 import { ScatteredHexagons } from './brand/HexagonPattern';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Hero({ headline, subheadline, primaryCTA, secondaryCTA, heroImage }: HeroProps) {
+  // Apple-style scroll animation setup
+  const { scrollY } = useScroll();
+  
+  // Transform values for smooth shrink effect (easing is built into useTransform)
+  const titleScale = useTransform(scrollY, [0, 300], [1, 0.70]);
+  const titleY = useTransform(scrollY, [0, 300], [0, -32]);
+  const titleOpacity = useTransform(scrollY, [0, 300], [1, 0.85]);
+
   return (
     <section className="relative min-h-screen flex items-center section-padding-large overflow-hidden">
       {/* Background with improved gradient */}
@@ -36,12 +45,25 @@ export default function Hero({ headline, subheadline, primaryCTA, secondaryCTA, 
             </div>
 
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <motion.h1 
+                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+                style={{
+                  scale: titleScale,
+                  y: titleY,
+                  opacity: titleOpacity,
+                }}
+              >
                 <span className="text-gray-900">Raih IPK</span>
                 <span className="block text-primary-500 mt-2">Impianmu!</span>
-              </h1>
+              </motion.h1>
 
-              <div className="w-24 h-1.5 bg-gradient-to-r from-primary-500 to-red-400 rounded-lg mx-auto lg:mx-0" />
+              <motion.div 
+                className="w-24 h-1.5 bg-gradient-to-r from-primary-500 to-red-400 rounded-lg mx-auto lg:mx-0"
+                style={{
+                  scale: titleScale,
+                  opacity: titleOpacity,
+                }}
+              />
             </div>
 
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
