@@ -69,8 +69,8 @@ export function ScatteredHexagons({ className = '', color = '#D60000' }: Scatter
     const points = [];
     for (let i = 0; i < 6; i++) {
       const angle = (Math.PI / 3) * i - Math.PI / 6;
-      const x = cx + size * Math.cos(angle);
-      const y = cy + size * Math.sin(angle);
+      const x = Math.round((cx + size * Math.cos(angle)) * 100) / 100;
+      const y = Math.round((cy + size * Math.sin(angle)) * 100) / 100;
       points.push(`${x},${y}`);
     }
     return points.join(' ');
