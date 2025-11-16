@@ -1,6 +1,40 @@
+'use client';
+
 import { TestimonialsProps } from '@/types';
 import TestimonialCard from './TestimonialCard';
 import { Quote, Users, TrendingUp, Award } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
+
+const headerVariants: Variants = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const testimonialVariants: Variants = {
+  offscreen: {
+    rotateY: 90,
+    opacity: 0,
+  },
+  onscreen: {
+    rotateY: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 1,
+    },
+  },
+};
 
 export default function Testimonials({ testimonials }: TestimonialsProps) {
   return (
@@ -12,7 +46,13 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
       
       <div className="container mx-auto px-6 max-w-7xl relative">
         {/* Enhanced Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={headerVariants}
+        >
           <div className="inline-flex items-center gap-2 bg-green-50 text-green-600 px-4 py-2 rounded-lg text-sm font-semibold mb-4">
             💬 Testimoni Real
           </div>
@@ -59,16 +99,25 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard 
-              key={testimonial.id} 
-              testimonial={testimonial}
-              index={index}
-            />
+            <motion.div
+              key={testimonial.id}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={testimonialVariants}
+              transition={{ delay: index * 0.2 }}
+              style={{ perspective: 1000 }}
+            >
+              <TestimonialCard 
+                testimonial={testimonial}
+                index={index}
+              />
+            </motion.div>
           ))}
         </div>
 

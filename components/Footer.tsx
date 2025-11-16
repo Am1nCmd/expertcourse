@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Youtube, Linkedin } from 'lucide-react';
+import Image from 'next/image';
 import ExoTeamLogo from './brand/ExoTeamLogo';
-import ExpertCourseLogo from './brand/ExpertCourseLogo';
 import { ScatteredHexagons } from './brand/HexagonPattern';
 
 export default function Footer() {
@@ -8,15 +8,22 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-gray-900 text-white overflow-hidden">
-      {/* Hexagon Pattern Background */}
-      <ScatteredHexagons className="opacity-5" color="#FFFFFF" />
+      {/* Hexagon Pattern Background - More visible */}
+      <ScatteredHexagons className="opacity-20" color="#FFFFFF" />
 
       <div className="container mx-auto px-6 max-w-7xl py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand with Logo */}
           <div className="space-y-4">
             <div className="mb-4">
-              <ExpertCourseLogo size={100} showText={true} />
+              <div className="relative w-48 h-24">
+                <Image
+                  src="/images/logo-small.png"
+                  alt="Expert Course"
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Platform bimbingan belajar online yang dirancang khusus untuk mahasiswa Indonesia. 

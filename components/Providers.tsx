@@ -1,7 +1,6 @@
 'use client';
 
-import { HeroUIProvider } from '@heroui/react';
-
+// No providers needed for daisyUI - it's pure CSS
 export function Providers({ children }: { children: React.ReactNode }) {
-  return <HeroUIProvider>{children}</HeroUIProvider>;
+  return <>{children}</>;
 }

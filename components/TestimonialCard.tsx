@@ -1,8 +1,8 @@
 'use client';
 
 import { TestimonialCardProps } from '@/types';
-import { Card, CardBody, Avatar } from '@heroui/react';
 import { Star, Quote, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
 
 interface ExtendedTestimonialCardProps extends TestimonialCardProps {
   index?: number;
@@ -22,8 +22,8 @@ export default function TestimonialCard({ testimonial, index = 0 }: ExtendedTest
   ];
 
   return (
-    <Card className={`group ${cardVariants[index % 3]} hover:shadow-xl transition-all duration-500 hover-lift border-2 rounded-xl`}>
-      <CardBody className="space-y-6 p-6">
+    <div className={`card group ${cardVariants[index % 3]} hover:shadow-xl transition-all duration-500 hover-lift border-2 rounded-xl`}>
+      <div className="card-body space-y-6 p-6">
         {/* Enhanced Quote Icon */}
         <div className="relative">
           <div className={`${quoteColors[index % 3]} opacity-20`}>
@@ -70,13 +70,23 @@ export default function TestimonialCard({ testimonial, index = 0 }: ExtendedTest
         {/* Enhanced Student Info */}
         <div className="flex items-center gap-4 pt-6 border-t-2 border-white/50">
           <div className="relative">
-            <Avatar
-              src={testimonial.avatar}
-              name={testimonial.name}
-              size="lg"
-              className="flex-shrink-0 ring-2 ring-white"
-              fallback={<GraduationCap className="w-6 h-6" />}
-            />
+            <div className="avatar">
+              <div className="w-16 h-16 rounded-full ring-2 ring-white">
+                {testimonial.avatar ? (
+                  <Image
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    width={64}
+                    height={64}
+                    className="rounded-full"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-primary-100 flex items-center justify-center">
+                    <GraduationCap className="w-8 h-8 text-primary-500" />
+                  </div>
+                )}
+              </div>
+            </div>
             {/* Verification badge */}
             <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
               <span className="text-white text-xs">✓</span>
@@ -103,7 +113,7 @@ export default function TestimonialCard({ testimonial, index = 0 }: ExtendedTest
             </div>
           </div>
         )}
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 }

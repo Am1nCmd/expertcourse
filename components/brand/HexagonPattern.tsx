@@ -49,14 +49,20 @@ interface ScatteredHexagonsProps {
 }
 
 export function ScatteredHexagons({ className = '', color = '#D60000' }: ScatteredHexagonsProps) {
+  // More hexagons with higher opacity for better visibility
   const hexagons = [
-    { x: 10, y: 5, size: 40, opacity: 0.15 },
-    { x: 85, y: 15, size: 35, opacity: 0.12 },
-    { x: 50, y: 25, size: 50, opacity: 0.1 },
-    { x: 20, y: 70, size: 30, opacity: 0.18 },
-    { x: 75, y: 80, size: 45, opacity: 0.08 },
-    { x: 92, y: 50, size: 38, opacity: 0.14 },
-    { x: 5, y: 40, size: 32, opacity: 0.16 },
+    { x: 10, y: 5, size: 40, opacity: 0.2 },
+    { x: 85, y: 15, size: 35, opacity: 0.18 },
+    { x: 50, y: 25, size: 50, opacity: 0.15 },
+    { x: 20, y: 70, size: 30, opacity: 0.22 },
+    { x: 75, y: 80, size: 45, opacity: 0.16 },
+    { x: 92, y: 50, size: 38, opacity: 0.19 },
+    { x: 5, y: 40, size: 32, opacity: 0.21 },
+    { x: 60, y: 10, size: 28, opacity: 0.17 },
+    { x: 30, y: 60, size: 42, opacity: 0.2 },
+    { x: 70, y: 35, size: 36, opacity: 0.18 },
+    { x: 15, y: 85, size: 33, opacity: 0.19 },
+    { x: 95, y: 75, size: 40, opacity: 0.17 },
   ];
 
   const createHexagonPoints = (cx: number, cy: number, size: number) => {
@@ -87,8 +93,10 @@ export function ScatteredHexagons({ className = '', color = '#D60000' }: Scatter
             )}
             fill="none"
             stroke={color}
-            strokeWidth="3"
+            strokeWidth="2.5"
             opacity={hex.opacity}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         ))}
       </svg>

@@ -1,10 +1,46 @@
+'use client';
+
 import { PackagesProps } from '@/types';
 import PackageCard from './PackageCard';
 import { Star, Shield, Clock } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
+
+const headerVariants: Variants = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const packageVariants: Variants = {
+  offscreen: {
+    y: 80,
+    opacity: 0,
+    scale: 0.9,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.3,
+      duration: 0.8,
+    },
+  },
+};
 
 export default function Packages({ packages }: PackagesProps) {
   return (
-    <section id="packages" className="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="packages" className="section-padding-large bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(214,0,0,0.03),transparent_50%)]" />
       <div className="absolute top-20 right-10 w-32 h-32 bg-primary-100 rounded-full blur-3xl opacity-50" />
@@ -12,7 +48,13 @@ export default function Packages({ packages }: PackagesProps) {
 
       <div className="container mx-auto px-6 max-w-7xl relative">
         {/* Enhanced Header */}
-        <div className="text-center mb-20">
+        <motion.div
+          className="text-center mb-20"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={headerVariants}
+        >
           <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-600 px-5 py-2.5 rounded-xl text-sm font-semibold mb-6">
             💎 Paket Premium
           </div>
@@ -40,12 +82,21 @@ export default function Packages({ packages }: PackagesProps) {
               <span className="font-medium">Akses 24/7</span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Package Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-16 pt-8 mt-8">
-          {packages.map((pkg) => (
-            <PackageCard key={pkg.id} package={pkg} />
+          {packages.map((pkg, index) => (
+            <motion.div
+              key={pkg.id}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={packageVariants}
+              transition={{ delay: index * 0.15 }}
+            >
+              <PackageCard package={pkg} />
+            </motion.div>
           ))}
         </div>
 

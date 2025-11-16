@@ -1,8 +1,40 @@
 'use client';
 
 import { CTASectionProps } from '@/types';
-import { Button } from '@heroui/react';
 import { ArrowRight, Zap, Clock, Shield, Star } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
+
+const ctaVariants: Variants = {
+  offscreen: {
+    scale: 0.9,
+    opacity: 0,
+  },
+  onscreen: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
+const statsVariants: Variants = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.3,
+      duration: 0.8,
+    },
+  },
+};
 
 export default function CTA({ headline, description, ctaButton }: CTASectionProps) {
   return (
@@ -17,7 +49,13 @@ export default function CTA({ headline, description, ctaButton }: CTASectionProp
       <div className="absolute bottom-20 right-10 w-24 h-24 bg-white/5 rounded-full blur-2xl animate-pulse"></div>
       
       <div className="container mx-auto px-6 max-w-5xl relative z-10">
-        <div className="text-center space-y-8">
+        <motion.div
+          className="text-center space-y-8"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={ctaVariants}
+        >
           {/* Enhanced Icon with animation */}
           <div className="flex justify-center">
             <div className="relative">
@@ -50,15 +88,13 @@ export default function CTA({ headline, description, ctaButton }: CTASectionProp
 
           {/* Enhanced CTA Button */}
           <div className="pt-6">
-            <Button
-              as="a"
+            <a
               href={ctaButton.href}
-              size="lg"
-              className="bg-white text-primary-600 hover:bg-gray-50 font-bold px-10 py-6 text-lg shadow-xl hover-scale transition-all duration-300 rounded-lg"
-              endContent={<ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />}
+              className="btn btn-lg gap-2 bg-white text-primary-600 hover:bg-gray-50 font-bold px-10 text-lg shadow-xl hover-scale transition-all duration-300 rounded-lg border-none inline-flex"
             >
               {ctaButton.text}
-            </Button>
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </a>
             
             {/* Money back guarantee */}
             <p className="text-white/90 text-sm mt-4 font-medium">
@@ -67,7 +103,13 @@ export default function CTA({ headline, description, ctaButton }: CTASectionProp
           </div>
 
           {/* Enhanced Trust indicators with stats */}
-          <div className="pt-12">
+          <motion.div
+            className="pt-12"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={statsVariants}
+          >
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <div className="flex items-center justify-center mb-3">
@@ -109,7 +151,7 @@ export default function CTA({ headline, description, ctaButton }: CTASectionProp
                 <div className="text-white/80 text-sm">Dalam 3 bulan</div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Final push with scarcity */}
           <div className="pt-8">
@@ -120,7 +162,7 @@ export default function CTA({ headline, description, ctaButton }: CTASectionProp
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
